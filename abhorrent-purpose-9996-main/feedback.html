@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+
+    }
+
+    body {
+        background-color: #4465de;
+
+    }
+
+    #card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+    }
+
+
+
+    .card {
+        color: white;
+        background-color: hsla(227, 100%, 79%, 0.486);
+        text-align: left;
+        transition: 1s;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+    }
+
+    .card:hover {
+        background-color: hsla(228, 83%, 84%, 0.881);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    }
+
+
+
+
+    .card img {
+        width: 100%;
+        margin-top: 20px;
+        height: 300px;
+        transition: 0.5s;
+        border-radius: 10px;
+
+    }
+
+
+
+    #rating2 {
+        margin: auto;
+        width: 30px;
+        margin-bottom: 50px;
+        height: 30px;
+        display: flex;
+    }
+
+    #rating2 img {
+        height: 100%;
+    }
+
+
+    #title {
+        text-align: right;
+    }
+
+    #review {
+        text-align: center;
+    }
+
+    form {
+        padding: 10px;
+        width: 50%;
+        margin: auto;
+        display: block;
+        display: none;
+        margin-bottom: 30px;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        background-color: #95acff;
+        border-radius: 10px;
+    }
+
+    #create {
+        width: 400px;
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+        background-color: #fe8d57;
+        height: 50px;
+        color: white;
+        border: 0px;
+        border-radius: 30px;
+        font-size: larger;
+        transition: 1s;
+    }
+
+    #create:hover {
+
+        background-color: #fea77e;
+        transition: 1s;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+    }
+
+    #name {
+        border-radius: 30px;
+        border: none;
+        height: 30px;
+    }
+
+    #location {
+        border-radius: 30px;
+        border: none;
+        height: 30px;
+        color: white;
+        background-color: #fe8d57;
+
+    }
+
+    #place {
+        border-radius: 30px;
+        border: none;
+        color: white;
+        background-color: #fe8d57;
+
+    }
+
+    #rating {
+        border-radius: 30px;
+        border: none;
+    }
+
+    form button {
+        border-radius: 30px;
+        border: none;
+        height: 30px;
+        color: white;
+        background-color: #fe8d57;
+    }
+
+    #review {
+        border-radius: 30px;
+        border: none;
+    }
+
+    .fade-in {
+        opacity: 0;
+        animation: fadeInAnimation ease-in 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        #card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: auto;
+        }
+
+        form {
+            padding: 10px;
+            width: 60%;
+            margin: auto;
+            display: block;
+            display: none;
+            margin-bottom: 30px;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            background-color: #95acff;
+            border-radius: 10px;
+        }
+
+    }
+
+    @media screen and (max-width: 320px) {
+        #card-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 5px;
+            margin-left: 100px;
+            width: 200px;
+
+        }
+
+
+        form {
+            padding: 10px;
+            width: 90%;
+            margin: auto;
+            display: block;
+            display: none;
+            margin-bottom: 30px;
+            color: white;
+            text-align: center;
+            font-size: 15px;
+            background-color: #95acff;
+            border-radius: 10px;
+            margin-left: 90px;
+        }
+    }
+
+    header {
+        /* height: 5vh; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #4465de;
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    nav img {
+        width: 100%;
+    }
+
+    #menu {
+        width: 1vw;
+        filter: invert(100%);
+        cursor: pointer;
+    }
+
+    #links {
+        width: 70%;
+        text-align: center;
+        padding-bottom: 0.5em;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #links a {
+        text-decoration: none;
+        color: white;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    #dropping {
+        display: flex;
+    }
+
+    #locdrop,
+    #pricedrop,
+    #menudrop {
+        background-color: #183282;
+        border: 2px solid white;
+        width: 7.5vw;
+        display: flex;
+        /* display: none; */
+        justify-content: space-around;
+    }
+
+    #locdrop>ul>li,
+    #pricedrop>ul>li,
+    #menudrop>ul>li {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        margin-bottom: 7.5%;
+    }
+
+    #locdrop>ul>li>a,
+    #pricedrop>ul>li>a,
+    #menudrop>ul>li>a {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        margin-bottom: 7.5%;
+        font-size: 1vw;
+    }
+
+    #dropping {
+        position: absolute;
+        top: 5%;
+        z-index: 100;
+    }
+
+    #locdrop {
+        display: none;
+        margin-right: 7.5vw;
+    }
+
+    #pricedrop {
+        display: none;
+        margin-left: 65vw;
+    }
+
+    #menudrop {
+        display: none;
+        margin-left: 90vw;
+    }
+
+    #menudrop img {
+        filter: invert(100%);
+        margin: 0 0.5vw 0 1vw;
+    }
+
+    #logout {
+        display: none;
+    }
+
+    footer {
+        padding: 1%;
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        background-color: #183282;
+    }
+
+    #foot_up {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #foot_links {
+        width: 70%;
+        text-align: center;
+        padding-bottom: 0.5em;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #foot_links a {
+        text-decoration: none;
+        color: white;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    #foot_down {
+        display: flex;
+        justify-content: center;
+    }
+
+    #foot_down img {
+        width: 5em;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <header class="fade-in">
+        <nav>
+            <div>
+                <img src="./Images/Every_Logo-clear.png" alt="" />
+            </div>
+            <div id="links">
+                <a href="./index.html">Home</a>
+                <a href="">Destination</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="">Pricing</a>
+            </div>
+            <img src="./Images/menu.svg" alt="" id="menu">
+        </nav>
+        <div id="dropping">
+            <div id="locdrop" class="dropdown">
+                <ul class="location">
+                    <li><a href="products.html">Asia</a></li>
+                    <li><a href="products.html">Europe</a></li>
+                    <li><a href="products.html">North America</a></li>
+                    <li><a href="products.html">South America</a></li>
+                    <li><a href="products.html">Africa</a></li>
+                </ul>
+            </div>
+            <div id="pricedrop" class="dropdown">
+                <ul class="price">
+                    <li><a href="products.html" id="5000">$5,000</a></li>
+                    <li><a href="products.html" id="10000">$10,000</a></li>
+                    <li><a href="products.html" id="15000">$15,000</a></li>
+                    <li><a href="products.html" id="20000">$20,000</a></li>
+                    <li><a href="products.html" id="25000">Over $20,000</a></li>
+                </ul>
+            </div>
+            <div id="menudrop" class="dropdown">
+                <ul class="menu">
+                    <li><a href="login.html" id="login"><img src="./Images/log-in.svg" alt=""> Log In</a></li>
+                    <li><a href="signUp.html" id="signUp"><img src="./Images/edit.svg" alt=""> Sign Up</a></li>
+                    <li><a href="products.html" id="products"><img src="./Images/briefcase.svg" alt=""> Tours</a></li>
+                    <li><a href="" id="logout"><img src="./Images/log-out.svg" alt="" id="logout"> Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button id="create" class="fade-in">Give your Feedback</button>
+    <form class="fade-in">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="location">Location:</label>
+        <select id="location" name="location" onchange="populatePlaces()">
+            <option value="" selected disabled>Choose Location</option>
+            <option value="Asia">Asia</option>
+            <option value="Africa">Africa</option>
+            <option value="South America">South America</option>
+            <option value="North America">North America</option>
+            <option value="Europe">Europe</option>
+        </select><br><br>
+
+        <label for="place">Place:</label>
+        <select id="place" name="place"></select><br><br>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" min="1" max="5"><br><br>
+
+        <label for="review">Review:</label>
+        <textarea id="review" name="review"></textarea><br><br>
+
+        <button type="button" onclick="submitFeedback()">Submit</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <div id="card-container" class="fade-in"></div>
+    <footer class="fade-in">
+        <div id="foot_up" class="fade-in">
+            <div>
+                <img src="./Images/Every_Logo-clear.png" alt="" />
+            </div>
+            <div id="foot_links">
+                <a href="./index.html">Home</a>
+                <a href="">Destination</a>
+                <a href="">Feedback</a>
+                <a href="">Pricing</a>
+            </div>
+        </div>
+        <div id="foot_down">
+            <img src="./Images/triple.png" alt="" />
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        let create = document.getElementById("create")
+        let form = document.querySelector("form")
+        let clicked = false
+        create.addEventListener("click", () => {
+            if (clicked == false) {
+                form.style.display = "block"
+                create.innerText = "Hide Feedback form"
+                clicked = true
+            } else {
+                form.style.display = "none"
+                create.innerText = "Give your Feedback"
+                clicked = false
+
+
+            }
+
+
+        })
+
+
+
+
+        const url = "https://abhorrent-purpose-9996.onrender.com/data";
+
+        async function recieve(link) {
+            let res = await fetch(link);
+            let data = await res.json();
+            return data;
+        }
+        async function populatePlaces() {
+            document.getElementById("place").value = "";
+            let location = document.getElementById("location").value;
+            let data = await recieve(url);
+            let places = data.filter((item) => item.location === location).map((item) => item.name);
+            let placeSelect = document.getElementById("place");
+            placeSelect.innerHTML = "";
+            for (let i = 0; i < places.length; i++) {
+                let option = document.createElement("option");
+                option.text = places[i];
+                option.value = places[i];
+                placeSelect.append(option);
+            }
+        }
+
+
+
+
+
+        function fetchandrender() {
+            fetch(`https://abhorrent-purpose-9996.onrender.com/users`).then((res) => res.json()).then((data) => {
+                document.getElementById("card-container").innerHTML = ""
+                data = data.filter((item) => item.review);
+                for (let i = 0; i < data.length; i++) {
+                    let card = createCard(data[i]);
+                    document.getElementById("card-container").appendChild(card);
+                }
+            })
+        }
+        fetchandrender()
+
+
+
+
+
+
+
+
+        async function submitFeedback() {
+
+            // if (isLogin==false){Swal.fire("Please Login to continue")
+            // return
+            // }
+
+            let name = document.getElementById("name").value;
+            let location = document.getElementById("location").value;
+            let place = document.getElementById("place").value;
+            let rating = document.getElementById("rating").value;
+            let review = document.getElementById("review").value;
+
+            let data = await recieve(url);
+            let feedback = data.find(item => item.name === place && item.location === location);
+            let imageClip = feedback ? feedback.imageClip : undefined;
+
+            if (!name || !location || !place || !rating || !review) {
+                Swal.fire("Please fill in all fields before submitting feedback.");
+                return;
+            }
+
+            let obj = {
+                name: name,
+                location: location,
+                place: place,
+                rating: rating,
+                review: review,
+                imageClip: imageClip
+            };
+            fetch(`https://abhorrent-purpose-9996.onrender.com/users`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(obj)
+                }).then((res) => res.json()).then((data) => { fetchandrender() })
+
+            Swal.fire(`Hi ${name}! Your feedback has been recorded`);
+            document.getElementById("name").value = "";
+            document.getElementById("location").value = "";
+            document.getElementById("place").innerHTML = "";
+            document.getElementById("rating").value = "";
+            document.getElementById("review").value = "";
+            document.getElementById("card-container").innerHTML = ""
+
+            form.style.display = "none"
+            clicked = false
+            create.innerText = "Give your Feedback"
+
+        }
+
+
+
+        function createCard(obj) {
+            // Create card elements
+            let card = document.createElement("div");
+            let image = document.createElement("img");
+            let content = document.createElement("div");
+            let title = document.createElement("p");
+            let location = document.createElement("h3");
+            let review = document.createElement("h1");
+            let rating = document.createElement("div");
+
+            // Set card classes and styles
+            card.className = "card";
+            image.className = "card-image";
+            content.className = "card-content";
+            image.src = obj.imageClip;
+
+            // Set card content
+            title.textContent = "By:- " + obj.name;
+            location.textContent = obj.place + " , " + obj.location;
+            review.textContent = obj.review;
+            rating.textContent = obj.rating;
+            rating.setAttribute("id", "rating2");
+            location.setAttribute("id", "location2");
+            review.setAttribute("id", "review");
+            title.setAttribute("id", "title");
+
+            // Display stars for rating
+            let rate = '';
+            for (let i = 0; i < obj.rating - 1; i++) {
+                rate += '<img src="./Images/star.png" alt=""/>'
+            }
+            if (obj.rating % 1 != 0) {
+                rate += '<img src="./Images/star-half.png" alt=""/>'
+            }
+            rating.innerHTML = rate;
+
+            // Append elements to card
+            content.appendChild(rating);
+            content.appendChild(location);
+            content.appendChild(review);
+            content.appendChild(title);
+
+            card.appendChild(image);
+            card.appendChild(content);
+
+            return card;
+
+
+
+        }
+
+
+        let home = document.querySelector("#links > a:nth-child(1)");
+        let destination = document.querySelector("#links > a:nth-child(2)");
+        let feedback = document.querySelector("#links > a:nth-child(3)");
+        let pricing = document.querySelector("#links > a:nth-child(4)");
+        let menu = document.getElementById("menu");
+
+        home.addEventListener("mouseover", () => {
+            document.querySelector("#locdrop").style.display = "none";
+            document.querySelector("#pricedrop").style.display = "none";
+            document.getElementById("menudrop").style.display = "none";
+        });
+
+        destination.addEventListener("mouseover", () => {
+            document.querySelector("#locdrop").style.display = "block";
+            document.querySelector("#pricedrop").style.display = "none";
+            document.getElementById("menudrop").style.display = "none";
+        });
+
+        document.querySelector("#locdrop").addEventListener("mouseleave", () => {
+            document.querySelector("#locdrop").style.display = "none";
+        });
+
+        feedback.addEventListener("mouseover", () => {
+            document.querySelector("#locdrop").style.display = "none";
+            document.querySelector("#pricedrop").style.display = "none";
+            document.getElementById("menudrop").style.display = "none";
+        });
+
+        pricing.addEventListener("mouseover", () => {
+            document.querySelector("#locdrop").style.display = "none";
+            document.querySelector("#pricedrop").style.display = "block";
+            document.getElementById("menudrop").style.display = "none";
+        });
+
+        document.querySelector("#pricedrop").addEventListener("mouseleave", () => {
+            document.querySelector("#pricedrop").style.display = "none";
+        });
+
+        menu.addEventListener("click", () => {
+            document.querySelector("#menudrop").style.display = "block";
+            document.querySelector("#locdrop").style.display = "none";
+            document.querySelector("#pricedrop").style.display = "none";
+        });
+
+        document.querySelector("main").addEventListener("mouseover", () => {
+            document.querySelector("#locdrop").style.display = "none";
+            document.querySelector("#pricedrop").style.display = "none";
+            document.getElementById("menudrop").style.display = "none";
+        });
+
+        console.log(document.querySelectorAll("#locdrop a"));
+
+        document.querySelectorAll("#locdrop a").forEach((element) => {
+            element.addEventListener("click", (event) => {
+                // event.preventDefault()
+                localStorage.setItem("location", element.innerText);
+                console.log("test");
+            });
+        });
+        document.querySelectorAll("#pricedrop a").forEach((element) => {
+            element.addEventListener("click", () => {
+                localStorage.setItem("price", element.id);
+            });
+        });
+
+        if (isLog == true) {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("signUp").style.display = "none";
+            document.getElementById("logout").style.display = "block";
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

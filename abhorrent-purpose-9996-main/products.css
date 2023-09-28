@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  /* height: 5vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #4465de;
+}
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav img {
+  width: 100%;
+}
+
+#menu {
+  width: 1vw;
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+#links {
+  width: 70%;
+  text-align: center;
+  padding-bottom: 0.5em;
+  display: flex;
+  justify-content: space-around;
+}
+
+#links a {
+  text-decoration: none;
+  color: white;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+#dropping {
+  display: flex;
+}
+
+#locdrop, #pricedrop, #menudrop{
+  background-color: #183282;
+  border: 2px solid white;
+  width: 7.5vw;
+  display: flex;
+  /* display: none; */
+  justify-content: space-around;
+}
+
+#locdrop > ul > li, #pricedrop > ul > li, #menudrop > ul > li {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 7.5%;
+}
+
+#locdrop > ul > li > a, #pricedrop > ul > li > a, #menudrop > ul > li > a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 7.5%;
+  font-size: 1vw;
+}
+
+#dropping {
+  position: absolute;
+  top: 5%;
+  z-index: 100;
+}
+
+#locdrop {
+  display: none;
+  margin-right: 7.5vw;
+}
+
+#pricedrop {
+  display: none;
+  margin-left: 65vw;
+}
+
+#menudrop {
+  display: none;
+  margin-left: 90vw;
+}
+
+#menudrop img{
+  filter: invert(100%);
+  margin: 0 0.5vw 0 1vw;
+}
+
+#logout {
+  display: none;
+}
+main {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #7693fb;
+}
+
+#functions {
+  width: 20%;
+  /* height: 50%; */
+  margin-top: 2em;
+  background-image: url("http://clipart-library.com/images/rinRGAnnT.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#functions > img {
+  height: 100%;
+  overflow: hidden;
+}
+
+#filter {
+  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.filterCont h3 {
+  color: white;
+}
+
+.filterPrice, .filterLocation, .filterRating {
+  color: white;
+}
+
+#filter > h2 {
+  font-size: 2.5em;
+  margin: 1%;
+  color: white;
+}
+
+#chooseFitler {
+  margin: 1%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#dropFilter select {
+  width: 50%;
+}
+
+#price {
+  display: none;
+}
+#ratingSelect {
+  display: none;
+}
+
+#sort {
+  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+#sort > h2 {
+  font-size: 2.5em;
+  margin: 1%;
+}
+
+#chooseSort {
+  margin: 1%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#dropSort select {
+  width: 50%;
+}
+
+#priceSort {
+  display: none;
+}
+
+#tours {
+  width: 70%;
+  margin-top: 2em;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.cards {
+  display: flex;
+  height: 12.75vw;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 1em;
+  /* background-color: #183282; */
+  border: 0.25em solid white;
+  /* background: linear-gradient(#000000da); */
+  box-shadow: inset 0 0 0 150vw rgba(0, 0, 0, 0.2);
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.cards:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+  box-shadow: inset 0 0 0 150vw rgba(0, 0, 0, 0.1);
+}
+
+.cards:hover p {
+  transition: 0.5s;
+  font-size: calc(5vw - 45px);
+  margin-top: 1.5%;
+}
+
+/* .bg {
+    width: 100%;
+    height: 15em;
+    border-radius: 0.75em;
+} */
+
+.left {
+  width: 70%;
+  color: white;
+}
+
+.left > h2 {
+  font-size: 2.5vw;
+}
+
+.left > h4 {
+  font-size: 1.5vw;
+}
+
+.left > p {
+  margin-top: calc(calc(2.5vw*2) - 45px);
+  font-size: 1.25vw;
+}
+
+/* .left > h6 {
+    margin-top: 2em;
+} */
+
+.left > button {
+  border-radius: 0.5em;
+  border: 1px solid white;
+  width: 7.5vw;
+  height: 2vw;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-weight: bolder;
+  margin-top: 0.5em;
+}
+
+.left > button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.right {
+  width: 25%;
+  padding: 0.5% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rating > img {
+  width: 10%;
+}
+
+.right > img {
+  width: 30%;
+}
+.pagination-button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 1px solid white;
+}
+
+#pagination {
+  display: flex;
+  width: 100%;
+  gap: 0.5em;
+  justify-content: center;
+  margin: 1.5%;
+}
+
+#pagination button {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+#pagination button.active {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+}
+
+#pagination button:hover:not(.active) {
+  background-color: #f79665;
+  border-radius: 5px;
+}
+
+footer {
+  padding: 1%;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: #183282;
+}
+
+#foot_up {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#foot_links {
+  width: 70%;
+  text-align: center;
+  padding-bottom: 0.5em;
+  display: flex;
+  justify-content: space-around;
+}
+
+#foot_links a {
+  text-decoration: none;
+  color: white;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+#foot_down {
+  display: flex;
+  justify-content: center;
+}
+
+#foot_down img {
+  width: 5em;
+  margin: auto;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation ease-in 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}

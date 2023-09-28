@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/SignUp</title>
+    <link rel="stylesheet" href="./signUp.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+  </head>
+  <body  >
+    <header class="fade-in">
+      <nav>
+        <div>
+          <img src="./Images/Every_Logo-clear.png" alt="" />
+        </div>
+        <div id="links">
+          <a href="./index.html">Home</a>
+          <a href="">Destination</a>
+          <a href="feedback.html">Feedback</a>
+          <a href="">Pricing</a>
+        </div>
+        <img src="./Images/menu.svg" alt="" id="menu">
+      </nav>
+      <div id="dropping">
+        <div id="locdrop" class="dropdown">
+          <ul class="location">
+            <li><a href="products.html">Asia</a></li>
+            <li><a href="products.html">Europe</a></li>
+            <li><a href="products.html">North America</a></li>
+            <li><a href="products.html">South America</a></li>
+            <li><a href="products.html">Africa</a></li>
+          </ul>
+        </div>
+        <div id="pricedrop" class="drowpdown">
+          <ul class="price">
+            <li><a href="products.html" id="5000">$5,000</a></li>
+            <li><a href="products.html" id="10000">$10,000</a></li>
+            <li><a href="products.html" id="15000">$15,000</a></li>
+            <li><a href="products.html" id="20000">$20,000</a></li>
+            <li><a href="products.html" id="25000">Over $20,000</a></li>
+          </ul>
+        </div>
+        <div id="menudrop" class="drowpdown">
+          <ul class="menu">
+            <li><a href="login.html" id="login"><img src="./Images/log-in.svg" alt=""> Log In</a></li>
+            <li><a href="signUp.html" id="signUp"><img src="./Images/edit.svg" alt=""> Sign Up</a></li>
+            <li><a href="products.html" id="products"><img src="./Images/briefcase.svg" alt=""> Tours</a></li>
+            <li><a href="" id="logout"><img src="./Images/log-out.svg" alt=""> Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div id="signUp" class="fade-in" >
+      <div
+        class="carousel fade-in"
+        data-flickity='{"contain": true,"pageDots": false ,"autoPlay": 1500 }'
+      >
+        <div class="carousel-cell">
+          <img
+            src="https://images.unsplash.com/photo-1683130462165-63f2f9a1831b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          />
+        </div>
+        <div class="carousel-cell">
+          <img
+            src="https://images.unsplash.com/photo-1682687981603-ae874bf432f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          />
+        </div>
+        <div class="carousel-cell">
+          <img
+            src="https://images.unsplash.com/photo-1626402755867-08c198d8f3db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          />
+        </div>
+        <div class="carousel-cell">
+          <img
+            src="https://images.unsplash.com/photo-1683130461749-dc8ff05b0fcd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          />
+        </div>
+        <div class="carousel-cell">
+          <img
+            src="https://images.unsplash.com/photo-1682687982107-14492010e05e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          />
+        </div>
+      </div>
+      <form>
+        <img src="./images/Every_Logo-clear.png" alt="" />
+        <h3>Create Account</h3>
+        <input type="text" placeholder="Name" id="name" />
+        <input
+          type="number"
+          name="Number"
+          id="moNumber"
+          placeholder="Mobile Number"
+        />
+        <input type="email" placeholder="Email" id="email" required />
+        <input type="password" placeholder="Password" id="password" required />
+        <button id="create">Create account</button>
+        <hr>
+        <br>
+        <span>Already have an account? <a href="./login.html">LogIn</a></span>
+      </form>
+    </div>
+    <footer>
+      <div id="foot_up">
+        <div>
+          <img src="./Images/Every_Logo-clear.png" alt="" />
+        </div>
+        <div id="foot_links">
+          <a href="./index.html">Home</a>
+          <a href="">Destination</a>
+          <a href="">Feedback</a>
+          <a href="">Pricing</a>
+        </div>
+      </div>
+      <div id="foot_down">
+        <img src="./Images/triple.png" alt="" />
+      </div>
+    </footer>
+  </body>
+  <script src="./signUp.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</html>

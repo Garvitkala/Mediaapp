@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Checkout</title>
+  </head>
+  <link rel="stylesheet" href="checkout.css" />
+  <body>
+    <header>
+      <nav>
+        <div>
+          <img src="./Images/Every_Logo-clear.png" alt="" />
+        </div>
+        <div id="links">
+          <a href="./index.html">Home</a>
+          <a href="">Destination</a>
+          <a href="feedback.html">Feedback</a>
+          <a href="">Pricing</a>
+        </div>
+        <img src="./Images/menu.svg" alt="" id="menu">
+      </nav>
+      <div id="dropping">
+        <div id="locdrop" class="dropdown">
+          <ul class="location">
+            <li><a href="products.html">Asia</a></li>
+            <li><a href="products.html">Europe</a></li>
+            <li><a href="products.html">North America</a></li>
+            <li><a href="products.html">South America</a></li>
+            <li><a href="products.html">Africa</a></li>
+          </ul>
+        </div>
+        <div id="pricedrop" class="drowpdown">
+          <ul class="price">
+            <li><a href="products.html" id="5000">$5,000</a></li>
+            <li><a href="products.html" id="10000">$10,000</a></li>
+            <li><a href="products.html" id="15000">$15,000</a></li>
+            <li><a href="products.html" id="20000">$20,000</a></li>
+            <li><a href="products.html" id="25000">Over $20,000</a></li>
+          </ul>
+        </div>
+        <div id="menudrop" class="drowpdown">
+          <ul class="menu">
+            <li><a href="login.html" id="login"><img src="./Images/log-in.svg" alt=""> Log In</a></li>
+            <li><a href="signUp.html" id="signUp"><img src="./Images/edit.svg" alt=""> Sign Up</a></li>
+            <li><a href="products.html" id="products"><img src="./Images/briefcase.svg" alt=""> Tours</a></li>
+            <li><a href="index.html" id="logout"><img src="./Images/log-out.svg" alt=""> Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="progression">
+        <div id="top">
+          <p>TOUR</p>
+          <p>SELECT ADDRESS</p>
+          <p>CHECKOUT</p>
+          <p>PAYMENT</p>
+        </div>
+        <div class="container">
+          <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+      <div id="bag"></div>
+      <div id="address">
+        <h2>Add address</h2>
+        <input id="addressInp" type="text" required placeholder="Enter Location" />
+        <input type="text" placeholder="Flat no/ Building name/ Street name" />
+        <input type="text" placeholder="Landmark (optional)" />
+        <input type="text" placeholder="City" />
+        <input type="text" placeholder="Mobile Number" />
+        <input type="text" placeholder="Enter Email" />
+        <input type="text" placeholder="Enter Full name" />
+        <!-- <button id="enter">Save & Continue</button> -->
+      </div>
+      <div id="checkout">
+        <p>Order Summary</p>
+        <p><span>Actual Amount</span> <span id="actual"></span></p>
+        <!-- <p><span>Members</span> <span id="shipping"></span></p> -->
+        <p><span>Discount</span> <span id="discount"></span></p>
+        <p>
+          <span
+            >Amount to pay
+            <span id="note">Note:Inclusive of all taxes</span> </span
+          ><span id="toPay"></span>
+        </p>
+
+        <!-- <p>Order Summary</p>
+            <p><span>Actual Amount</span> <span id="actual"></span></p>
+            <p><span>Shipping Charges</span> <span id="shipping"></span></p>
+            <p><span>Discount</span> <span id="discount"></span></p>
+            <p><span>Amount to pay</span><span id="toPay"></span></p>
+            <p>Note:Inclusive of all taxes</p> -->
+      </div>
+      <div id="payment">
+        <div class="left-nav">
+          <span>
+            <h2 id="creditCard">Credit/Debit Card</h2>
+            <h2 id="upi">UPI</h2>
+            <h2 id="banking">Net Banking</h2>
+          </span>
+        </div>
+        <div class="right-page">
+          <div id="credit">
+            <input type="text" placeholder="Enter card no." />
+            <div class="more-details">
+              <input type="text" placeholder="MM" />
+              <h3>/</h3>
+              <input type="text" placeholder="YYYY" />
+              <input type="password" placeholder="Enter CVV" />
+            </div>
+            <input type="text" placeholder="Name on Card" />
+          </div>
+          <div id="upiPay">
+            <input type="text" placeholder="Enter upi id" />
+          </div>
+          <div id="netbanking">
+            <input type="text" placeholder="Enter account number" />
+          </div>
+        </div>
+        <div class="totalamount">
+          <h2>Total :- <span id="total-amount">0</span></h2>
+          <button id="pay">Place Order</button>
+        </div>
+      </div>
+      <button id="selAdd">SELECT ADDRESS</button>
+    </main>
+    <footer>
+      <div id="foot_up">
+        <div>
+          <img src="./Images/Every_Logo-clear.png" alt="" />
+        </div>
+        <div id="foot_links">
+          <a href="./index.html">Home</a>
+          <a href="">Destination</a>
+          <a href="">Feedback</a>
+          <a href="">Pricing</a>
+        </div>
+      </div>
+      <div id="foot_down">
+        <img src="./Images/triple.png" alt="" />
+      </div>
+    </footer>
+  </body>
+  <script src="checkout.js"></script>
+</html>

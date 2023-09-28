@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <nav class="fade-in">
+     
+       <div id="header">
+        <img src="./Images/Every_Logo-clear.png" alt="">
+        <div id="welcome">
+            <p>Welcome Admin</p>
+        </div>
+       </div>
+    </nav>
+    <main class="fade-in">
+        <div>
+            <div>
+               <h2>Total Bookings</h2> 
+               <div>
+                <div id="total-booking-count"><h1>count</h1></div>
+               </div>
+                
+            </div>
+            <div id="addNew">
+               <h2>Add New Trip</h2> 
+               <div>
+               </div>
+            </div>
+            <div>
+               <h2>Total Users</h2> 
+               <div>
+                <div id="total-Usres-count"><h1>count</h1></div>
+               </div>
+            </div>
+        </div>
+        <div id="cont3">
+            <h2>Add trip</h2>
+            <input type="number" id="trip-id" class="u-full-width" placeholder="ID" />
+            <input type="text" id="trip-name" class="u-full-width" placeholder="Name" />
+            <input type="number" id="trip-rating" class="u-full-width" placeholder="Rating" />
+            <input type="text" id="trip-location" class="u-full-width" placeholder="location" />
+            <input type="text" id="trip-image" class="u-full-width" placeholder="Image Url" />
+            <input type="number" id="trip-price" class="u-full-width" placeholder="Price" />
+            <button id="add-trip" class="u-full-width button button-primary">
+              Add trip
+            </button>
+            <button id="hide2">Hide</button>
+
+        </div>
+        <div id="cont2">
+            <h2>Update your trips</h2>
+            <input type="text" id="update-trip-id" class="u-full-width" placeholder="ID" />
+            <input type="text" id="update-trip-name" class="u-full-width" placeholder="name" />
+            <input type="number" id="update-trip-rating" class="u-full-width" placeholder="rating" />
+            <input type="text" id="update-trip-image" class="u-full-width" placeholder="Image Url" />
+            <input type="text" id="update-trip-location" class="u-full-width" placeholder="location" />
+            <input type="number" id="update-trip-price" class="u-full-width" placeholder="price" />
+            <button id="update-trip" class="u-full-width button button-primary">
+              Update all fields
+            </button>
+            <button id="hide">Hide</button>
+          </div>
+        <div id="cont">
+        <div id="table">
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Rating</th>
+                    <th>Price</th>
+                    <th>Update</th>
+
+                </thead>
+                <tbody>
+            <!-- tbody -->
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
+<script src="admin.js"></script>
+<script>
+let cont=document.getElementById("cont2")
+
+
+
+</script>

@@ -1,0 +1,247 @@
+body {
+    margin: 0px;
+    background-color: #4465de;
+}
+
+#header {
+    display: flex;
+}
+
+#welcome {
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+/*--------------------------body----------------------------*/
+main>div {
+    display: flex;
+    height: 160px;
+
+    margin-top: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main>div>div {
+    color: white;
+    text-align: center;
+    background-color: hsla(227, 100%, 79%, 0.486);
+    width: 19%;
+    height: 150px;
+    border-radius: 30px;
+    border: 6px solid white;
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+nav p {
+    color: white;
+    translate: -90px;
+}
+
+main>div>div:hover {
+    background-color: hsla(227, 100%, 89%, 0.486);
+    width: 22%;
+    height: 170px;
+    transition: 1s;
+    border: 3px solid white;
+    font-size: larger;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+
+}
+
+
+
+#cont {
+    display: flex;
+    width: 1200px;
+    margin-right: 300px;
+    justify-content: space-evenly;
+}
+
+
+/* ************************table body************************* */
+
+#table {
+    color: white;
+    height: 400px;
+    width: max-content;
+    overflow-y: scroll;
+    margin-top: 300px;
+    margin-left: 100px;
+
+}
+
+table {
+    border-spacing: 10px;
+    width: max-content;
+    background-color: hsla(227, 28%, 40%, 0.486);
+}
+
+th {
+    font-size: x-large;
+    width: 150px;
+}
+
+#table tbody td {
+    font-size: large;
+}
+
+#table tbody tr {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+tbody button {
+    background-color: #fe8d57;
+    color: white;
+    padding: 5px;
+    border-radius: 30px;
+    border: 0px;
+    transition: 1s;
+
+}
+
+tbody button:hover {
+    background-color: #faa882;
+    color: white;
+    padding: 5px;
+    border-radius: 30px;
+    border: 0px;
+    height: 30px;
+    width: 50px;
+    transition: 5s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+}
+
+#cont2 {
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 50px;
+    display: none;
+    color: white;
+}
+
+#cont2 input {
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    background-color: hsla(228, 19%, 42%, 0.881);
+    transition: 1s;
+
+}
+
+#cont2 input:hover {
+    height: 35px;
+    background-color: hsla(229, 22%, 53%, 0.881);
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+}
+
+#cont2 button{
+    border-radius: 30px;
+    border: 1px solid white;
+    height: 30px;
+    color: white;
+    background-color: #fe8d57;
+    transition: 1s;
+}
+#cont2 button:hover{
+    background-color: #fea77e;
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#hide{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 400px;
+}
+
+#hide2{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 400px;
+}
+
+
+
+#cont3 {
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 50px;
+    display: none;
+    color: white;
+}
+
+#cont3 input {
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    background-color: hsla(228, 53%, 75%, 0.881);
+    transition: 1s;
+
+}
+
+#cont3 input:hover {
+    height: 35px;
+    background-color: hsla(230, 93%, 83%, 0.881);
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+}
+
+#cont3 button{
+    border-radius: 30px;
+    border: 1px solid white;
+    height: 30px;
+    color: white;
+    background-color: #fe8d57;
+    transition: 1s;
+}
+#cont3 button:hover{
+    background-color: #fea77e;
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+
+
+
+
+
+/* ----------------body ends-------------------------- */
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation ease-in 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+  
+    100% {
+        opacity: 1;
+    }
+  }
